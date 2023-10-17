@@ -14,8 +14,8 @@ function Signup() {
     const dispatch = useDispatch();
 
     const [signupDetails, setSignupDetails] = useState({
-        email: '',
         fullName: '',
+        email: '',
         password: '',
         avatar: ''
     });
@@ -77,7 +77,7 @@ function Signup() {
 
         const response = await dispatch(createAccount(formData));
         console.log(response);
-        if(response?.payload?.data) {
+        if(response?.payload?.success){
             navigate("/");
         }
         setSignupDetails({

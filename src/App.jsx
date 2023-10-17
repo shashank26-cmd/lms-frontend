@@ -8,6 +8,7 @@ import Homepage  from './Pages/HomePage'
 import Notfound from './Pages/Notfound'
 import Signup from './Pages/Signup'
 import Login from './Pages/Login';
+import CourseList from './Pages/Course/CourseList'
 function App() {
  
   return (
@@ -17,6 +18,9 @@ function App() {
 <Route path="/" element={<Homepage />}></Route>
 <Route path='/about' element={<AboutUs />}></Route>
 <Route path='*'  element={<Notfound />}></Route>
+<Route path='/courses'  element={<CourseList />}></Route>
+
+
 <Route path='/signup' element={<Signup />}></Route>
 <Route path='/login' element={<Login />}></Route>
 

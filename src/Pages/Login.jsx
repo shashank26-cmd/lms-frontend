@@ -41,7 +41,7 @@ function Signin() {
 
         const response = await dispatch(login(signinDetails));
         console.log(response);
-        if(response?.payload?.data) {
+        if(response?.payload?.success) {
             navigate("/");
         }
         setSigninDetails({

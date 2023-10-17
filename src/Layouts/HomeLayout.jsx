@@ -39,14 +39,14 @@ function HomeLayout({ children }) {
         e.preventDefault();
 
         const response = await dispatch(logout());
-        if(response?.payload?.data)
+        if(response?.payload?.success)
             navigate("/");
     }
 
     return (
         
         <div className="min-h-[90vh]">
-            <div className="drawer absolute left-0 z-50 w-full">
+            <div className="drawer absolute left-0 z-50 w-fit">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                     <label htmlFor="my-drawer" className='cursor-pointer relative'>
@@ -82,7 +82,7 @@ function HomeLayout({ children }) {
                             <li>
                                 <Link to="/course/create">Create Course</Link>
                             </li>
-                        )
+                        ) 
 
                         }
                         <li>
@@ -99,7 +99,7 @@ function HomeLayout({ children }) {
                             <li className="absolute bottom-4 w-[90%]">
                                 <div className="w-full flex items-center justify-center">
                                     <button className="btn-primary px-4 py-1 font-semibold rounded-md w-full">
-                                        <Link to="/signin">Login</Link>
+                                        <Link to="/login">Login</Link>
                                     </button>
                                     <button className="btn-secondary px-4 py-1 font-semibold rounded-md w-full">
                                         <Link to="/signup">Signup</Link>

@@ -6,7 +6,7 @@ import einstein from "../Assets/Images/einstein.png";
 import nelsonMandela from "../Assets/Images/nelsonMandela.png";
 import steveJobs from "../Assets/Images/steveJobs.png";
 
-const AboutUs = () => {
+function AboutUs(){
   return (
     <HomeLayout>
       <div className="pl-20 pt-10 flex flex-col text-white">
@@ -170,6 +170,6 @@ const AboutUs = () => {
       </div>
     </HomeLayout>
   );
-};
+}
 
 export default AboutUs;
