@@ -42,7 +42,7 @@ function HomeLayout({ children }) {
             <div className="drawer absolute left-0 z-50 w-full">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
-                    <label htmlFor="my-drawer">
+                    <label htmlFor="my-drawer" >
                         <FiMenu onClick={changeWidth} size={"32px"} className='font-bold text-white m-4' />
                     </label>
                 </div>

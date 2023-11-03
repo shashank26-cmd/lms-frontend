@@ -5,10 +5,14 @@ function Footer() {
     const newDate = new Date();
     const year = newDate.getFullYear();
 
+
+
+    //position relative so got power of  where to align footer 
+    //sm =small screen 
+
     return (
      <> 
-
-        <footer className="relative left-0 bottom-0 h-[10vh] py-5 flex flex-col sm:flex-row items-center justify-between sm:px-20 text-white bg-gray-800">
+ <footer className="relative left-0 bottom-0 h-[10vh] py-5 flex flex-col sm:flex-row items-center justify-between sm:px-20 text-white bg-gray-800">
             <section className="text-lg">
                 Copyright {year} | All rights reserved
             </section>
