@@ -8,7 +8,7 @@
 
 
 
-This is for mySelf 
+This is for building frontend from  start 
 
 # setup tailwind 
 
@@ -79,3 +79,35 @@ header and footer bhi pass karskte the but limitations kahi par sidebar kahi par
 
 13 Pages 
 homepage
+
+14 about us page
+
+15 not found page
+
+16 signup
+
+basic form banaya first profie pic[previewImage] email pass create acc etc
+
+now after tha dispatch and navigate
+1 handleinputuser
+2 handleImage
+
+onsubmit set and pass 
+to authslice asyncthunk and take response from there and now further task
+ 
+ now login and now lgin complete so save res to local storage so extrareducer
+
+ logout
+
+ now courses all courses first course slice then store.js and after that add code to courseslice
+
+
+course list AND COURSE CARD
+NOW COURSE DESCRIPTION using location and naviagte extra func state 
+
+require auth and in app.jsx using it to inside it passing to whom we have to allow  
+
+create  course
+
+
+

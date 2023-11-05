@@ -41,7 +41,7 @@ export const createNewCourse = createAsyncThunk("courses/create", async (data) =
             },
             error: 'Failed to create course'
         });
-        return (await response).data;
+        return (await response).data; // await response ke data property kko bhhejenge pure ke pure response ko nhiu
     } catch(error) {
         console.log(error);
         toast.error(error?.response?.data?.message);

@@ -46,7 +46,7 @@ function CreateCourse() {
     }
 
     async function onFormSubmit(e) {
-        e.preventDefault();
+        e.preventDefault();// form ko submit  wiase hi refresh woh hame nhi chahiye
         if(!userInput.title || !userInput.description || !userInput.createdBy || !userInput.category || !userInput.thumbnail) {
             toast.error("All field are mandatory");
             return;
@@ -112,7 +112,7 @@ function CreateCourse() {
                                     required
                                     type="text"
                                     name="title"
-                                    id="title"
+                                    id="title" // html for par bhi title hi hai
                                     placeholder="enter the title of the course"
                                     onChange={handleUserInput}
                                     value={userInput.title}

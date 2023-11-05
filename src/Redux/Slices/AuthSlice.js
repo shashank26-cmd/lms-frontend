@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk,  createSlice } from "@reduxjs/toolkit"; // thunk a piece of coe that does some delayed work rather than execute logic now
 import toast from "react-hot-toast";
 import axiosInstance  from "../../Helpers/axiosInstance";
 
@@ -7,7 +7,7 @@ const initialState={
     
         isLoggedIn: localStorage.getItem('isLoggedIn') === 'true' || false,
         role: localStorage.getItem('role') || "",
-        data: localStorage.getItem('data') || {}
+        data: JSON.parse(localStorage.getItem('data')) || {}
       
       
 };
@@ -18,10 +18,12 @@ export const createAccount=createAsyncThunk("/auth/signup",async(data)=>{
         toast.promise(res,{
            loading :"Wait ! creating your account",
            success:(data)=>{
-            return data?.data?.message;
+            return data?.data?.message;  // if sucess so data mai se message nikale lenge
            } ,
            error:"failed to create acc"
         });
+
+    
         return (await res).data;
 
     }catch(error){

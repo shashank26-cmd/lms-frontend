@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";// to acces state
 import { Navigate, Outlet } from "react-router-dom";
 
 function RequireAuth({ allowedRoles }) {

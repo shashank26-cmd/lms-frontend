@@ -3,8 +3,6 @@ import {  useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import HomeLayout from "../../Layouts/HomeLayout";
-// import { getUserData } from "../../Redux/Slices/AuthSlice.js";
-// import { cancelCourseBundle } from "../../redux/slices/razorPaySlice";
 function Profile() {
 
     // const navigate = useNavigate();

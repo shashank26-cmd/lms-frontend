@@ -15,7 +15,8 @@ function Contact() {
 
     function handleInputChange(e) {
         const {name, value} = e.target;
-        setUserInput({
+        console.log(name,value)
+             setUserInput({
             ...userInput, 
             [name]: value
         })
@@ -67,7 +68,7 @@ function Contact() {
                             placeholder="enter your name"
                             name="name"
                             onChange={handleInputChange}
-                            value={userInput.name}
+                            value={userInput.name} //  to  update value parameter if not write thsis then value will remain same in box after submission also
                         />
                     </div>
                     <div className="flex flex-col gap-1 w-full">

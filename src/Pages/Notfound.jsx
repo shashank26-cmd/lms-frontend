@@ -9,8 +9,8 @@ function Notfound() {
                 Page not found...
             </div>
             <button className="mt-5">
-                <a onClick={() => navigate(-1)} className="relative inline-block text-sm font-medium text-[#FF6A3D] active:text-yellow-500 focus:outline-non">
-                    <span  className="relative block px-8 py-3 bg-[#1A2238] border border-current">Go back</span>
+                <a className="relative inline-block text-sm font-medium text-[#FF6A3D] active:text-yellow-500 focus:outline-non">
+                    <span onClick={() => navigate(-1)}  className="relative block px-8 py-3 bg-[#1A2238] border border-current">Go back</span>
                 </a>
             </button>
         </div>

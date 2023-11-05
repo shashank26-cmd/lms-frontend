@@ -23,8 +23,8 @@ function Signup() {
     const [previewImage, setPreviewImage] = useState("");
 
     function handleUserInput(e) {
-        const {name, value} = e.target;
-        setSignupDetails({
+        const {name, value} = e.target;  //target element name and uski value fetch now set previous + new name and its value
+        setSignupDetails({ 
             ...signupDetails,
             [name]: value
         })
@@ -42,6 +42,7 @@ function Signup() {
         const fileReader = new FileReader();
         fileReader.readAsDataURL(uploadedImage);
         fileReader.addEventListener("load", function () {
+            console.log(this.result)
             setPreviewImage(this.result);
         })
     }
@@ -66,7 +67,10 @@ function Signup() {
         //     return;
         // }
 
+        
+        // form data to create a bundle of data to send to the server using xmlhttp request
         const formData = new FormData();
+
         formData.append("fullName", signupDetails.fullName);
         formData.append("email", signupDetails.email);
         formData.append("password", signupDetails.password);
