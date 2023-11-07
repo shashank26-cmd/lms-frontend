@@ -4,7 +4,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
-// import { isEmail, isValidPassword } from "../helpers/regexMatcher";
+import { isEmail, isValidPassword } from "../helpers/regexMatcher";
 import HomeLayout from "../Layouts/HomeLayout";
 import { createAccount } from "../Redux/Slices/AuthSlice";
 
@@ -58,14 +58,14 @@ function Signup() {
             toast.error("Name should be atleast of 5 characters");
             return;
         }
-        // if(!isEmail(signupDetails.email)) {
-        //     toast.error("Invalid email provided");
-        //     return;
-        // }
-        // if(!isValidPassword(signupDetails.password)) {
-        //     toast.error("Invalid password provided, password should 6-16 character long with atleast a number and a special character");
-        //     return;
-        // }
+        if(!isEmail(signupDetails.email)) {
+            toast.error("Invalid email provided");
+            return;
+        }
+        if(!isValidPassword(signupDetails.password)) {
+            toast.error("Invalid password provided, password should 6-16 character long with atleast a number and a special character");
+            return;
+        }
 
         
         // form data to create a bundle of data to send to the server using xmlhttp request

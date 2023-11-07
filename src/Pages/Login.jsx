@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
-// import { isEmail } from "../helpers/regexMatcher";
+import { isEmail } from "../helpers/regexMatcher";
 import HomeLayout from "../Layouts/HomeLayout";
 import { login } from "../Redux/Slices/AuthSlice";
 
@@ -34,10 +34,10 @@ function Signin() {
             toast.error("Please fill all the details");
             return;
         }
-        // if(!isEmail(signinDetails.email)) {
-        //     toast.error("Invalid email provided");
-        //     return;
-        // }
+        if(!isEmail(signinDetails.email)) {
+            toast.error("Invalid email provided");
+            return;
+        }
 
         const response = await dispatch(login(signinDetails));
         console.log(response);

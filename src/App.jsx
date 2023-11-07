@@ -18,6 +18,7 @@ import Profile from './Pages/User/Profile'
 // import DisplayLectures from './Pages/Dashboard/Displaylecture'
 import AddLecture from './Pages/Dashboard/Addlecture'
 import EditProfile from './Pages/User/EditProfile'
+import Checkout from "./Pages/Payment/Checkout"
 function App() {
  
   return (
@@ -49,6 +50,8 @@ function App() {
 <Route path='/user/profile' element={<Profile />} />
 {/* <Route path='/course/displaylectures' element={<DisplayLectures />}/> */}
 <Route path='/user/editprofile' element={<EditProfile />} />
+<Route path='/checkout' element={<Checkout />} />
+
 
 </Route>
 

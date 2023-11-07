@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import HomeLayout from "../../Layouts/HomeLayout";
 function Profile() {
+    
 
     // const navigate = useNavigate();
     
