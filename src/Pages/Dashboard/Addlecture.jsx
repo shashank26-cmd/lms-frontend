@@ -9,7 +9,7 @@ import { addCourseLecture } from "../../Redux/Slices/LectureSlice";
 
 function AddLecture() {
 
-    const courseDetails = useLocation().state;
+    const courseDetails = useLocation().state; //uselocation().state se course ke detail arhi hai
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -61,7 +61,7 @@ function AddLecture() {
     }
 
     useEffect(() => {
-        if(!courseDetails) navigate("/course");
+        if(!courseDetails) navigate("/courses");
     }, [])
 
 

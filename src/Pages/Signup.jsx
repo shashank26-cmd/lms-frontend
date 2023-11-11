@@ -4,7 +4,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
-import { isEmail, isValidPassword } from "../helpers/regexMatcher";
+import { isEmail, isValidPassword } from "../Helpers/regexMatcher";
 import HomeLayout from "../Layouts/HomeLayout";
 import { createAccount } from "../Redux/Slices/AuthSlice";
 
