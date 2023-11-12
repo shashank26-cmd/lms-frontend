@@ -9,7 +9,7 @@ const store=configureStore({
 
 auth : authSliceReducer,
 course:courseSliceReducer,
-razorpay : razorpaySliceReducer,
+razorpay:razorpaySliceReducer,
 lecture:lectureSliceReducer
 
 

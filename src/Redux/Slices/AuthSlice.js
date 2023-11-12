@@ -2,11 +2,29 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
 import axiosInstance from "../../Helpers/axiosInstance";
 
+const storedData = localStorage.getItem('data');
+console.log('Stored Data:', storedData);
+
+let parsedData;
+try {
+  parsedData = storedData ? JSON.parse(storedData) : {};
+} catch (error) {
+  console.error('Error parsing stored data:', error);
+  parsedData = {};
+}
+console.log('Parsed Data:', parsedData);
+
 const initialState = {
-    isLoggedIn: localStorage.getItem('isLoggedIn') === 'true' || false,
-    role: localStorage.getItem('role') || "",
-    data:localStorage.getItem('data') !==undefined? JSON.parse(localStorage.getItem('data')) : {}
+  isLoggedIn: localStorage.getItem('isLoggedIn') === 'true' || false,
+  role: localStorage.getItem('role') || "",
+  data: parsedData,
+  signData: null
 };
+
+
+
+
+
 
 export const createAccount = createAsyncThunk("/auth/signup", async (data) => {
     try {
@@ -52,7 +70,6 @@ export const logout = createAsyncThunk('/auth/logout', async () => {
             },
             error: "failed to logout ",
         });
-        return (await res).data;
     } catch (error) {
         toast.error(error?.response?.data?.message);
     }
@@ -88,7 +105,10 @@ export const getUserData = createAsyncThunk("/user/details", async () => {
 const authSlice = createSlice({
     name: 'auth',
     initialState,
-    reducers: {},
+    reducers: {
+
+        
+    },
     extraReducers: (builder) => {
         builder
             .addCase(login.fulfilled, (state, action) => {
