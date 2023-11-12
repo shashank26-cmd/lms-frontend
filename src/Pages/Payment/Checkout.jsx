@@ -29,8 +29,9 @@ function Checkout() {
         //     toast.error("something went wrong");
         //     return;
         // }
+        console.log(razorpayKey,subscription_id)
         const options = {
-            key: razorpayKey,
+            key: "rzp_test_BnvCUgVHSngi7r",
             subscription_id: subscription_id,
             name: "Courses .pvt ltd",
             description: "Subscription",
