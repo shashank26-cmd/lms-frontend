@@ -14,7 +14,7 @@ function Checkout() {
     const reduxState = useSelector((state) => state);
     console.log('Redux State:', reduxState);
 
-    const razorpayKey =   "rzp_test_BnvCUgVHSngi7r"
+    const razorpayKey =   
     console.log('Razorpay Key:', razorpayKey);
     
     const subscription_id = useSelector((state) => state?.razorpay?.subscription_id);
